@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Ивашевич Давид">
+	<title>Mesto</title>
+	<link rel="stylesheet" href="pages/index.css">
+</head>
+<body class="page">
+	<header class="header">
+		<img class="header__logo" src="images/logo.svg" alt="Логотип">
+	</header>
+	<main class="content">
+		<section class="profile">
+			<img class="profile__avatar" alt="Аватар" src="images/Avatar.png">
+			<div class="profile__info">
+				<h1 class="profile__title">Жак-Ив Кусто</h1>
+				<button type="button" aria-label="Редактор имени" class="profile__edit-button"></button>
+				<p class="profile__subtitle">Исследователь океана</p>
+			</div>
+			<button type="button" aria-label="Редактирование профиля" class="profile__add-button"></button>
+		</section>
+		<section class="elements">
+			<div class="elements__element">
+				<img src="images/donjak.jpeg" alt="Дон Жак" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Дон Жак</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">567</p>
+					</div>
+				</div>
+			</div>
+			<div class="elements__element">
+				<img src="images/bp.jpeg" alt="Трубач" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Трубач</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">642</p>
+					</div>
+				</div>
+			</div>
+			<div class="elements__element">
+				<img src="images/a10308a2b7f2983ec0197a2d7e3d6ef9.jpeg" alt="Водолаз" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Водолаз</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">714</p>
+					</div>
+				</div>
+			</div>
+			<div class="elements__element">
+				<img src="images/ii.jpeg" alt="Автограф" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Автограф</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">754</p>
+					</div>
+				</div>
+			</div>
+			<div class="elements__element">
+				<img src="images/Jacques.jpg" alt="Жить в кайф" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Жить в кайф</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">777</p>
+					</div>
+				</div>
+			</div>
+			<div class="elements__element">
+				<img src="images/i.jpeg" alt="Арт" class="elements__photo">
+				<div class="elements__info">
+					<h2 class="elements__title">Арт</h2>
+					<div class="elements__like-area">
+						<button class="elements__like elements__like_active" type="button" aria-label="Лайк"></button>
+						<p class="elements__likes">815</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<p class="footer__copyrigth">&copy;2020 Mesto Russia</p>
+	</footer>
+
+
+	
+	<div class="popup">
+		<div class="popup__container">
+			<button type="button" class="popup__close" aria-label="Закрытие"></button>
+			<h3 class="popup__name">Редактировать профиль</h3>
+			<form class="popup__form" name="profile" novalidate>
+				<label class="popup__label">
+					<input type="text" class="popup__input popup__input_name" name="username" required placeholder="Ваше имя" minlength="5" maxlength="12">
+				</label>
+				<label class="popup__label">
+					<input type="text" class="popup__input popup__input_profession" name="description" required placeholder="Расскажи о себе" minlength="3" maxlength="187">
+				</label>
+				<button type="submit" class="popup__submit" aria-label="Сохранить">Сохранить</button>
+			</form>
+		</div>
+
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
