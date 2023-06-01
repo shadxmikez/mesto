@@ -3,7 +3,7 @@ let popup = document.querySelector('.popup');
 let popunOpened = document.querySelector('.profile__edit-button');
 let popunClose = document.querySelector('.popup__close');
 let nameInput = document.querySelector('.popup__input_name');
-let jobInput = document.querySelector('.popup__input_profession');
+let jobInput = document.querySelector('.popup__input_description');
 let formElement = document.querySelector('.popup__form');
 let nameTitle = document.querySelector('.profile__title');
 let jobSub = document.querySelector('.profile__subtitle');
@@ -29,8 +29,7 @@ let popupSubmit = document.querySelector('.popup__submit');
 	
 	popupSubmit.addEventListener('click', () => {
 		popup.classList.remove('popup__opened');
-		
-	})
+	});
 
 
 
