@@ -10,6 +10,7 @@
 * Макет из Figma
 * Адаптивная вёрстка
 * Редактирование профиля, имени и описания
+* Работа с GIT Bash & GITHUB & GITHUBPages
 
 ## Ссылки на проект GITHUB : https://github.com/shadxmikez/mesto
 ## Ссылка на проект GITHUBPages : https://shadxmikez.github.io/mesto/
