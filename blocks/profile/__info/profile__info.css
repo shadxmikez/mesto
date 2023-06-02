@@ -1,6 +1,6 @@
 .profile__info {
 	display: grid;
-	grid-template-columns: minmax(min-content,max-content) minmax(min-content,max-content);
+	grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
 	align-items: center;
 	box-sizing: border-box;
 	padding: 0;
@@ -9,11 +9,11 @@
 }
 
 @media screen and (max-width: 647px) {
-.profile__info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px 10px;
-    justify-content: center;
-    margin: 0 auto;
-  }
+	.profile__info {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 14px 10px;
+		justify-content: center;
+		margin: 0 auto;
+	}
 }

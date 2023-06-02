@@ -11,6 +11,8 @@ let popupSubmit = document.querySelector('.popup__submit');
 
 popunOpened.addEventListener('click', () => {
 	popup.classList.add('popup_opened');
+	nameInput.value = nameTitle.textContent;
+	jobInput.value = jobSub.textContent;
 });
 
 popunClose.addEventListener('click', () => {
@@ -22,17 +24,13 @@ document.querySelector('input[name="description"]').defaultValue = 'Исслед
 
 function handleFormSubmit(evt) {
 	evt.preventDefault();
-	nameInput.value = nameTitle.textContent;
-	jobInput.value = jobSub.textContent; 
+	nameTitle.textContent = nameInput.value;
+	jobSub.textContent = jobInput.value;
 	popup.classList.remove('popup_opened');
 }
 
 formElement.addEventListener('submit', handleFormSubmit);
 
-
-
- /* nameTitle.textContent = nameInput.value; 
-  jobSub.textContent = jobInput.value; */
 
 
 
