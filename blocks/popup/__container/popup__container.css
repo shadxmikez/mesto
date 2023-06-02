@@ -1,9 +1,10 @@
 .popup__container {
+	display: flex;
+	flex-direction: column;
 	margin: 0;
 	padding: 34px 36px 37px 36px;
 	position: relative;
 	max-width: 430px;
-	max-height: 330px;
 	margin-top: 195px;
 	width: 100%;
 	box-sizing: border-box;

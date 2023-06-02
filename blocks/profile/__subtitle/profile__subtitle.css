@@ -5,6 +5,9 @@
 	max-width: 336px;
 	font-weight: 400;
 	padding: 0;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 @media screen and (max-width: 923px) {
