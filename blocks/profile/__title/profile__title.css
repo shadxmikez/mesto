@@ -7,7 +7,7 @@
 	overflow: hidden;
 	text-align: center;
 	white-space: nowrap;
-	max-width: 294px;
+	max-width: 336px;
 	text-overflow:ellipsis;
 }
 
@@ -15,7 +15,7 @@
   .profile__title {
     font-size: 29px;
     line-height: 36px;
-    max-width: 210px;
+    max-width: 226px;
   }
 }
 
@@ -23,6 +23,6 @@
   .profile__title {
     font-size: 27px;
     line-height: 33px;
-    max-width: 189px;
+    max-width: 215px;
 	}
 }
