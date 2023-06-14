@@ -1,25 +1,20 @@
-const listCard = document.querySelector(".elements__element");
+const listCard = document.querySelector('.elements__element');
 const popupProfile = document.querySelector('#profile-popup');
 const elementsPopup = document.querySelector('#elements-popup');
-const popupList = document.querySelector('.popup');
 const popunOpened = document.querySelector('.profile__edit-button');
 const elementsOpened = document.querySelector('.profile__add-button');
 const popunClose = document.querySelectorAll('.popup__close');
-const popupCloseImage = document.querySelector('.popup__close-image');
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
 const placeInput = document.querySelector('.popup__input_type_place');
 const imageInput = document.querySelector('.popup__input_type_image');
 const formElement = document.querySelector('.popup__form');
 const nameTitle = document.querySelector('.profile__title');
-const elementsTitle = document.querySelector('.elements__title');
 const jobSub = document.querySelector('.profile__subtitle');
-const elementsPhoto = document.querySelector('.elements__photo');
-const popupSubmit = document.querySelector('.popup__submit');
 const closeElement = document.querySelector('.popup__form-card');
-const captionPopup = document.querySelector(".popup__caption"); 
-const popupItemImg = document.querySelector(".popup__item-img"); 
-const elementsImage = document.querySelector('#elements-image'); 
+const captionPopup = document.querySelector('.popup__caption');
+const popupItemImg = document.querySelector('.popup__item-img');
+const elementsImage = document.querySelector('#elements-image');
 
 
 function boxModal(evt) {
@@ -43,8 +38,8 @@ popunOpened.addEventListener('click', boxModal);
 elementsOpened.addEventListener('click', boxModal);
 popunClose.forEach(btn => btn.addEventListener('click', boxModal));
 
-document.querySelector('input[name="username"]').defaultValue = 'Жак-Ив Кусто'
-document.querySelector('input[name="description"]').defaultValue = 'Исследователь океана'
+document.querySelector('input[name="username"]').defaultValue = 'Жак-Ив Кусто';
+document.querySelector('input[name="description"]').defaultValue = 'Исследователь океана';
 
 function handleFormSubmit(evt) {
 	evt.preventDefault();
@@ -84,7 +79,7 @@ const initialCards = [
 ];
 
 
-const elementsTemplate = document.querySelector("#elements-template").content;
+const elementsTemplate = document.querySelector('#elements-template').content;
 function createCard(name, link) {
 	const elementCard = elementsTemplate.querySelector('.elements__box').cloneNode(true);
 	const elementToCard = elementCard.querySelector('.elements__photo');
@@ -116,7 +111,7 @@ function addCard() {
 		listCard.append(createCard(item.name, item.link));
 	});
 }
-addCard()
+addCard();
 
 function handleFormSubmitAddCard(placeInput, imageInput) {
 	listCard.prepend(createCard(placeInput.value, imageInput.value));
