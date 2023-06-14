@@ -17,9 +17,9 @@ const jobSub = document.querySelector('.profile__subtitle');
 const elementsPhoto = document.querySelector('.elements__photo');
 const popupSubmit = document.querySelector('.popup__submit');
 const closeElement = document.querySelector('.popup__form-card');
-const captionPopup = document.querySelector(".popup__caption"); //captionPopupFullImage 
-const popupItemImg = document.querySelector(".popup__item-img"); //ImagePopupFullImage
-const elementsImage = document.querySelector('#elements-image'); //popupOpenFullImage
+const captionPopup = document.querySelector(".popup__caption"); 
+const popupItemImg = document.querySelector(".popup__item-img"); 
+const elementsImage = document.querySelector('#elements-image'); 
 
 
 function boxModal(evt) {
