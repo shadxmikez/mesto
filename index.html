@@ -25,54 +25,14 @@
 			<button type="button" aria-label="Редактирование профиля" class="profile__add-button"></button>
 		</section>
 		<section class="elements">
-			<div class="elements__element">
-				<img src="images/donjak.jpeg" alt="Дон Жак" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Дон Жак</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
-			<div class="elements__element">
-				<img src="images/bp.jpeg" alt="Трубач" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Трубач</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
-			<div class="elements__element">
-				<img src="images/a10308a2b7f2983ec0197a2d7e3d6ef9.jpeg" alt="Водолаз" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Водолаз</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
-			<div class="elements__element">
-				<img src="images/ii.jpeg" alt="Автограф" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Автограф</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
-			<div class="elements__element">
-				<img src="images/Jacques.jpg" alt="Жить в кайф" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Жить в кайф</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
-			<div class="elements__element">
-				<img src="images/i.jpeg" alt="Арт" class="elements__photo">
-				<div class="elements__info">
-					<h2 class="elements__title">Арт</h2>
-					<button class="elements__like elements__like-active" type="button" aria-label="Лайк"></button>
-				</div>
-			</div>
+			<ul class="elements__element">
+			</ul>
 		</section>
 	</main>
 	<footer class="footer">
 		<p class="footer__copyrigth">&copy;2023 Mesto Russia</p>
 	</footer>
-	<div class="popup">
+	<div id="profile-popup" class="popup">
 		<div class="popup__container">
 			<button type="button" class="popup__close" aria-label="Закрытие"></button>
 			<h3 class="popup__name">Редактировать профиль</h3>
@@ -89,6 +49,44 @@
 			</form>
 		</div>
 	</div>
+	<div id="elements-popup" class="popup">
+		<div class="popup__container">
+			<button type="button" class="popup__close" aria-label="Закрытие"></button>
+			<h3 class="popup__name">Новое место</h3>
+			<form class="popup__form popup__form-card" name="mesto" novalidate>
+				<label class="popup__label">
+					<input type="text" class="popup__input popup__input_type_place" name="placename" required
+						placeholder="Название" minlength="5" maxlength="99">
+				</label>
+				<label class="popup__label">
+					<input type="text" class="popup__input popup__input_type_image" name="placeimage" required
+						placeholder="Ссылка на картинку" minlength="5" maxlength="99">
+				</label>
+				<button type="submit" class="popup__submit" aria-label="Создать">Сохранить</button>
+			</form>
+		</div>
+	</div>
+	<div id="elements-image" class="popup">
+		<div class="popup__container popup__container-image">
+			<figure class="popup__image">
+				<img src="#" class="popup__item-img" alt="#">
+				<figcaption class="popup__caption"></figcaption>
+			</figure>
+			<button class="popup__close popup__close-image" type="button" id="close-image" aria-label="close"></button>
+		</div>
+	</div>
+	<template id="elements-template">
+		<article class="elements__box">
+			<button class="elements__delete">
+			</button>
+			<img src="#" alt="#" class="elements__photo">
+			<div class="elements__info">
+				<h2 class="elements__title"></h2>
+				<button class="elements__like">
+				</button>
+			</div>
+		</article>
+	</template>
 	<script src="index.js"></script>
 </body>
 
