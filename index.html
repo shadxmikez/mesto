@@ -22,7 +22,7 @@
 				<button type="button" aria-label="Редактор имени" class="profile__edit-button"></button>
 				<p class="profile__subtitle">Исследователь океана</p>
 			</div>
-			<button type="button" aria-label="Редактирование профиля" class="profile__add-button"></button>
+			<button type="button" aria-label="Добавление карточки" class="profile__add-button"></button>
 		</section>
 		<section class="elements">
 			<ul class="elements__element">
@@ -59,14 +59,14 @@
 						placeholder="Название" minlength="5" maxlength="99">
 				</label>
 				<label class="popup__label">
-					<input type="text" class="popup__input popup__input_type_image" name="placeimage" required
+					<input type="url" class="popup__input popup__input_type_image" name="placeimage" required
 						placeholder="Ссылка на картинку" minlength="5" maxlength="99">
 				</label>
 				<button type="submit" class="popup__submit" aria-label="Создать">Сохранить</button>
 			</form>
 		</div>
 	</div>
-	<div id="elements-image" class="popup">
+	<div id="elements-image" class="popup popup__background">
 		<div class="popup__container popup__container-image">
 			<figure class="popup__image">
 				<img src="#" class="popup__item-img" alt="#">
@@ -87,7 +87,8 @@
 			</div>
 		</article>
 	</template>
-	<script src="index.js"></script>
+	<script src="scripts/constants.js" defer></script>
+	<script src="scripts/index.js" defer></script>
 </body>
 
 </html>
