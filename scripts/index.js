@@ -8,7 +8,7 @@ const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_job');
 const placeInput = document.querySelector('.popup__input_type_place');
 const imageInput = document.querySelector('.popup__input_type_image');
-const formElement = document.querySelector('.popup__form');
+const formProfile = document.querySelector('.popup__form');
 const nameTitle = document.querySelector('.profile__title');
 const jobSub = document.querySelector('.profile__subtitle');
 const formCard = document.querySelector('.popup__form-card');
@@ -43,10 +43,10 @@ function handleFormSubmitProfile(evt) {
 	evt.preventDefault();
 	nameTitle.textContent = nameInput.value;
 	jobSub.textContent = jobInput.value;
-	popupProfile.classList.remove('popup_opened');
+	closePopup(popupProfile);
 }
 
-formElement.addEventListener('submit', handleFormSubmitProfile);
+formProfile.addEventListener('submit', handleFormSubmitProfile);
 
 const elementsTemplate = document.querySelector('#elements-template').content;
 function createCard(name, link) {
@@ -72,7 +72,7 @@ function createCard(name, link) {
 		popupItemImg.alt = name;
 	});
 
-	return cardImage, elementCard;
+	return elementCard;
 }
 
 function addInitialCards() {
@@ -89,10 +89,3 @@ function handleFormSubmitAddCard(evt) {
 	closePopup(elementsPopup);
 }
 formCard.addEventListener('submit', handleFormSubmitAddCard);
-
-formCard.addEventListener('submit', (evt) => {
-	evt.preventDefault();
-	handleFormSubmitAddCard(placeInput, imageInput);
-	formCard.reset();
-	closePopup(elementsPopup);
-});
