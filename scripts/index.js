@@ -15,14 +15,35 @@ const formCard = document.querySelector('.popup__form-card');
 const captionPopup = document.querySelector('.popup__caption');
 const popupItemImg = document.querySelector('.popup__item-img');
 const popupImage = document.querySelector('#elements-image');
+const popupTheme = document.querySelectorAll('.popup');
 
 function openPopup(popupElement) {
 	popupElement.classList.add('popup_opened');
+	document.addEventListener("keydown", closeEsp);
 }
 
 function closePopup(popupElement) {
 	popupElement.classList.remove('popup_opened');
+	document.addEventListener("keydown", closeEsp);
 }
+
+function closeEsp(evt) {
+	if(evt.key === 'Escape') {
+		const popup = document.querySelector('.popup_opened');
+		if(popup) {
+			closePopup(popup);
+		}
+	}
+}
+
+popupTheme.forEach((popupThemeElement) => {
+	const popup = popupThemeElement.closest('.popup');
+	popupThemeElement.addEventListener('mousedown', (evt) => {
+		if (evt.target.classList.contains('popup')) {
+			closePopup(popup);
+		}
+	});
+});
 
 buttonOpenPopupProfile.addEventListener('click', () => {
 	nameInput.value = nameTitle.textContent;
