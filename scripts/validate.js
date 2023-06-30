@@ -9,17 +9,21 @@ const validSetup = {
 
 enableValidation(validSetup);
 
-function enableValidation(config) {
-	const formList = document.querySelectorAll(config.formSelector);
+function enableValidation(validSetup) {
+	const formList = document.querySelectorAll(validSetup.formSelector);
 	[...formList].forEach(function (formElement) {
-		setEventListener(formElement, config);
+		setEventListener(formElement, validSetup);
 	});
 }
 
-function setEventListener(formElement) {
+function setEventListener(formElement, validSetup) {
 	const inputList = formElement.querySelectorAll(validSetup.inputSelector);
 	const submitButtonElement = formElement.querySelector(validSetup.saveButtonSelector);
 	toggleButtonState(submitButtonElement, formElement.checkValidity());
+
+	formElement.addEventListener('reset', () => {
+		disabledButton(submitButtonElement, validSetup);
+	});
 
 	[...inputList].forEach(function (inputElement) {
 		inputElement.addEventListener('input', function () {
@@ -75,3 +79,4 @@ function toggleButtonState(buttonElement, isActive) {
 		enabledButton(buttonElement);
 	}
 }
+
