@@ -89,7 +89,7 @@ function createCard(name, link) {
 		evt.target.classList.toggle('elements__like-active');
 	}
 
-	elementCard.addEventListener('click', () => {
+	cardImage.addEventListener('click', () => {
 		openPopup(popupImage);
 		captionPopup.textContent = name;
 		popupItemImg.src = link;
